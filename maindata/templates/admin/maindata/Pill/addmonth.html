@@ -1,0 +1,101 @@
+
+
+
+
+<a class="button rounded " data-bs-toggle="modal" data-bs-target="#showpilldistribution-{{ pill_id }}">اضف قسط</a>
+
+<div class="modal" dir="ltr" id="showpilldistribution-{{ pill_id }}" tabindex="-1" aria-labelledby="showpilldistributionLabel-{{ pill_id }}" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="showpilldistributionLabel-{{ pill_id }}">اضف قسط</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-month-form-{{ pill_id }}" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                    <div class="mb-3">
+                        <label for="numberInput-{{ pill_id }}" class="form-label">الدفعة</label>
+                        <input type="number" class="form-control" id="numberInput-{{ pill_id }}" name="monthpaid" required autofocus>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="sendInputValueToView('{{ pill_id|safe }}','{{ url|safe }}')">اضف</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} 
+            <div class="modal show" dir="ltr" id="showpilldistribution-1" tabindex="-1" aria-labelledby="showpilldistribution-1" aria-modal="true" role="dialog" style="display: block; padding-right: 0px;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="showpilldistributionLabel-1">/addmonth/1/اضف قسط</h5>
+                            <h5 class="modal-title" id="showpilldistributionLabel-1">1 </h5>
+                            <h5 class="modal-title" id="showpilldistributionLabel-1">zLVbPVIJeRitbVmHgLR9ilTfOSNlb3h54OeKkJnEw2jZXB4xUPlwz83ehMvgOmUk</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            
+                                <input type="hidden" name="csrfmiddlewaretoken" value="zLVbPVIJeRitbVmHgLR9ilTfOSNlb3h54OeKkJnEw2jZXB4xUPlwz83ehMvgOmUk">
+                            
+                                
+                                <div class="mb-3">
+                                    <label for="numberInput-1" class="form-label">الدفعة</label>
+                                    <input type="number" class="form-control" id="numberInput-1" name="monthpaid">
+                                </div>
+                                <button type="submit" class="btn btn-primary">اضف</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal" dir="ltr" id="showpilldistribution-2" tabindex="-1" aria-labelledby="showpilldistribution-2" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="showpilldistributionLabel-2">/addmonth/2/اضف قسط</h5>
+                            <h5 class="modal-title" id="showpilldistributionLabel-2">2 </h5>
+                            <h5 class="modal-title" id="showpilldistributionLabel-2">zO0AicjS35QlfKghG7jhcNhlbQrGzJPe4Rj9N0YNlgRR1qY7kbNEtArkEK9Bc2st</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="add-month-form-2" action="/addmonth/1/" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="zO0AicjS35QlfKghG7jhcNhlbQrGzJPe4Rj9N0YNlgRR1qY7kbNEtArkEK9Bc2st">
+                            
+                                
+                                <div class="mb-3">
+                                    <label for="numberInput-2" class="form-label">الدفعة</label>
+                                    <input type="number" class="form-control" id="numberInput-2" name="monthpaid">
+                                </div>
+                                <button type="submit" class="btn btn-primary">اضف</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
